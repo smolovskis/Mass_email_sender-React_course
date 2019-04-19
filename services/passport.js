@@ -29,6 +29,7 @@ passport.use(
         async (accessToken, refreshToken, profile, done) => {
             console.log('DB lookup: ' + profile.id);
             const existingUser = await User.findOne({googleId: profile.id});
+            console.log('existingUser: ' + existingUser);
             if (existingUser) {
                 return done(null, existingUser);
             }
