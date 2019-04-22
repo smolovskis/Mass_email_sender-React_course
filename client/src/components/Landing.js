@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {connect} from "react-redux";
 
 class Landing extends Component {
      render() {
@@ -10,10 +9,6 @@ class Landing extends Component {
            </div>
         )
     }
-}
-
-function mapStateToProps({ auth }) {
-    return { auth }
 }
 
 export default Landing;
